@@ -109,24 +109,23 @@ export default async function Signals() {
           );
         })}
       </ol>
-      <div className="flex flex-row justify-center items-center h-20 space-x-4 text-xs text-slate-500">
-        <a
-          href="/signals/feed"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-row items-center space-x-1 text-slate-500 hover:text-slate-900"
-        >
-          <span>Subscribe</span>
-          <RssIcon className="w-3 h-3" />
-        </a>
-        <span>or</span>
+      <div className="flex flex-row justify-center items-center h-20 gap-4 text-xs text-slate-500">
         <a
           href="https://www.are.na/julian-kempff/signals-7hs7c25tc7s"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-row items-center space-x-1 text-slate-500 hover:text-slate-900"
         >
-          Follow on Are.na
+          Powered by Are.na
+        </a>
+        <a
+          href="https://www.are.na/julian-kempff/signals-7hs7c25tc7s/feed/rss"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-row items-center space-x-1 text-slate-500 hover:text-slate-900"
+        >
+          <span>RSS</span>
+          <RssIcon className="w-3 h-3" />
         </a>
       </div>
     </>

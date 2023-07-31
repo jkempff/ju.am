@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="flex flex-col items-center leading-relaxed text-xl font-normal text-muted-foreground max-w-3xl mx-auto px-3">
-      <p className="[text-wrap:balance] mt-24 mb-4 text-muted-foreground text-center">
+      <p className="[text-wrap:balance] mt-24 mb-8 text-muted-foreground text-center">
         <span className="font-semibold text-accent-foreground">
           {"Hi, my name is Ju. "}
         </span>
