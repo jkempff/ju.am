@@ -20,9 +20,8 @@ export default async function Signals() {
     headers: {
       Authorization: `Bearer ${ARENA_TOKEN}`,
     },
-    cache: "default",
     next: {
-      revalidate: 10,
+      revalidate: 86400,
     },
   }).then((res) => res.json());
 
