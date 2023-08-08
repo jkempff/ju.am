@@ -9,6 +9,8 @@ const ARENA_TOKEN = process.env.ARENA_TOKEN;
 
 import { decodeHTML5Strict } from "entities";
 
+export const revalidate = 86400;
+
 export default async function Signals() {
   const url = new URL(
     "https://api.are.na/v2/channels/signals-7hs7c25tc7s/contents"
@@ -19,9 +21,6 @@ export default async function Signals() {
   const signals = await fetch(url.toString(), {
     headers: {
       Authorization: `Bearer ${ARENA_TOKEN}`,
-    },
-    next: {
-      revalidate: 86400,
     },
   }).then((res) => res.json());
 
