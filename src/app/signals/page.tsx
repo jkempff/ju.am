@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { ExternalLinkIcon, RssIcon, Share2Icon } from "lucide-react";
+import { ExternalLinkIcon, RssIcon } from "lucide-react";
 
 import { cn } from "@ju/utils";
 import { format, parseISO } from "date-fns";
@@ -8,8 +8,6 @@ import { format, parseISO } from "date-fns";
 const ARENA_TOKEN = process.env.ARENA_TOKEN;
 
 import { decodeHTML5Strict } from "entities";
-
-export const revalidate = 86400;
 
 export default async function Signals() {
   const url = new URL(
@@ -21,6 +19,9 @@ export default async function Signals() {
   const signals = await fetch(url.toString(), {
     headers: {
       Authorization: `Bearer ${ARENA_TOKEN}`,
+    },
+    next: {
+      revalidate: 3600,
     },
   }).then((res) => res.json());
 
